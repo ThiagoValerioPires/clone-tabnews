@@ -11,5 +11,5 @@ test("PUT to /api/v1/migrations should return 405", async () => {
   expect(response.status).toBe(405);
 
   const responseBody = await response.json();
-  expect(responseBody.error).toBe('Method "PUT" not allowed');
+  expect(responseBody.message).toBe("Método não permitido para este endpoint.");
 });
